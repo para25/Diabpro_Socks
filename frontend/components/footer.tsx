@@ -1,11 +1,13 @@
+import Link from "next/link"
+
 export function Footer() {
   return (
-    <footer className="bg-secondary border-t border-border py-12 px-4">
+    <footer className="bg-[linear-gradient(to_bottom,oklch(0.98_0.01_220),oklch(0.95_0.02_220))] border-t border-border py-14 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           <div>
             <h4 className="font-bold text-foreground mb-4">About</h4>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               Diabpro creates premium socks designed for comfort and care of diabetic feet.
             </p>
           </div>
@@ -13,14 +15,14 @@ export function Footer() {
             <h4 className="font-bold text-foreground mb-4">Products</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <Link href="/products/bamboo" className="hover:text-primary transition-colors">
                   Bamboo Socks
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <Link href="/products/cotton" className="hover:text-primary transition-colors">
                   Cotton Socks
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

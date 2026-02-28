@@ -119,6 +119,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at 10% 10%, oklch(0.97 0.03 220) 0%, transparent 35%),
+      radial-gradient(circle at 90% 90%, oklch(0.95 0.05 30) 0%, transparent 35%);
   }
 
   html {
@@ -201,11 +203,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all hover:shadow-lg hover:scale-105 active:scale-95;
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium border border-border transition-all hover:bg-muted;
+    @apply bg-white/70 text-secondary-foreground px-6 py-3 rounded-xl font-medium border border-border/70 backdrop-blur-sm transition-all duration-300 hover:bg-white hover:shadow-md;
   }
 
   .btn-accent {
@@ -213,7 +215,7 @@
   }
 
   .card-premium {
-    @apply bg-card text-card-foreground rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow;
+    @apply bg-card/85 text-card-foreground rounded-xl border border-border/70 shadow-sm hover:shadow-lg transition-all duration-300 backdrop-blur-sm;
   }
 
   .text-gradient {
